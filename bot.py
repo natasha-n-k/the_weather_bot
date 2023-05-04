@@ -23,7 +23,7 @@ class Bot:
         self.token = token
         self.updater = Updater(token=self.token, use_context=True)
         self.dispatcher = self.updater.dispatcher
-        self.weather_api = WeatherApi('c1187b3eaa7f19a879772ca85bc06244')
+        self.weather_api = WeatherApi('')
         self.add_handlers()
 
     def work(self):
@@ -75,5 +75,5 @@ class Bot:
         context.bot.send_message(chat_id=update.effective_chat.id,
                                  text="Не известные мне команды")
 
-bot = Bot('6043462615:AAE9xDEwnJY_erj-A1wE4QL2BwYulvDIAYI')
+bot = Bot('')
 bot.work()
